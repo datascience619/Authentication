@@ -1,25 +1,38 @@
 # Authentication
+🖊️ Fingerprint and Signature Recognition System
 
-📝 Text Summarization and Translation Tool
-
-A Python-based NLP application that automatically **summarizes large text documents** and optionally **translates** them into multiple languages using advanced machine learning and language models.
+A Python-based biometric image comparison tool that detects and verifies the similarity between two **fingerprint** or **signature** images using computer vision techniques. Built with **OpenCV** and a user-friendly **Tkinter GUI**, the system supports both extractive matching and adaptive image preprocessing.
 
  🚀 Features
 
-* ✂️ Extractive and abstractive text summarization
-* 🌍 Language translation support (e.g., English ↔ Hindi, French, etc.)
-* 📤 Upload documents (txt/pdf) or paste raw text
-* 🧠 Powered by NLP libraries and transformer models
-* 📋 Clean and intuitive user interface (optional: Streamlit/Tkinter)
+* 🔍 Compare two images in **Signature** or **Fingerprint** mode
+* 📷 ORB-based feature detection for robust matching
+* 🧠 Adaptive preprocessing for fingerprint images (Gaussian blur + thresholding)
+* 🎛️ Easy mode switching via GUI
+* 🖼️ View match score (%) with pass/fail result
+* 📤 Supports JPG, JPEG, and PNG image formats
+* 🖥️ Clean Tkinter interface with file browser and match report
 
  🛠️ Tech Stack
 
-Languages**: Python
-Libraries**: NLTK, HuggingFace Transformers, spaCy, Googletrans / DeepL API
-Optional UI**: Tkinter or Streamlit
+Language: Python
+Libraries: OpenCV, Tkinter, pyfingerprint (optional hardware integration), NumPy
+Techniques: ORB feature detection, BFMatcher, adaptive thresholding
 
  📂 Use Cases
 
-* Quickly summarizing news articles, research papers, or reports
-* Translating business summaries for multilingual audiences
-* Enhancing productivity in education, journalism, and content writing
+* Biometric identity verification
+* Signature authentication in legal or banking sectors
+* Educational demonstrations in computer vision/biometrics
+
+ 📸 Screenshots *(optional)*
+
+*Add GUI screenshots showing fingerprint and signature comparison output.*
+
+ 🧪 Matching Logic
+
+* Images are first converted to grayscale
+* For **fingerprints**, images are additionally blurred and thresholded
+* ORB features are extracted and matched using brute-force matcher
+* A similarity score is calculated and displayed
+
